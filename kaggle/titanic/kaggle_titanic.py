@@ -164,7 +164,7 @@ model.compile(optimizer=opt,
 ######################################################################################
 
 
-model.fit(X_train, y_train, epochs = 500)
+model.fit(X_train, y_train, epochs = 100)
 pred = model.predict(X_test).reshape(X_test.shape[0])
 pred = np.where(pred > 0.5, 1, 0)
 accuracy = 1 - (np.where((pred - y_test) == 0, 0, 1).sum()/len(y_test))
